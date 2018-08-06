@@ -40,6 +40,12 @@ const Plant = db.define('Plant', {
   },
   topRight: {
     type: Sequelize.INTEGER
+  },
+  imageUrl : {
+    type: Sequelize.TEXT,
+    validate: {
+      isUrl: true
+    }
   }
 })
 

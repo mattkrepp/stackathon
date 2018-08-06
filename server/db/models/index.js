@@ -16,7 +16,7 @@ const PlantGarden = require('./plantGarden');
  * instead of: const User = require('../db/models/user')
  */
 
-Garden.belongsTo(User);
+Garden.hasOne(User);
 Plant.belongsToMany(Garden, {through: PlantGarden});
 module.exports = {
   User, Garden, Plant, PlantGarden
